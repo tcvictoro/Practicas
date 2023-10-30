@@ -1,8 +1,86 @@
 <!DOCTYPE html>
 <html>
 <body onload="startTime()" bgcolor="lightblue">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+h1 {
+  background-color: gold;
+}
+
+h2 {
+  background-color: silver;
+}
+p.four {
+  border-style: dotted;
+  border-width: thick;
+  
+  
+  body {margin: 0;}
+
+}
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
 
 
+</style>
+
+
+
+<center><p class="four">Victor Ortiz Practicas</p></center>
 <h2>Cosas que puedo hacer con JavaScript</h2>
 
 <p id="demo">Cambiar el Texto que se muestra</p>
@@ -10,7 +88,7 @@
 <button type="button" onclick='document.getElementById("demo").innerHTML = "Hola Mundo!"'>Puchalo!</button>
 <br><br><br>
 
-<p>Encender o apagar la luz</p>
+<h2><p>Encender o apagar la luz</p></h2>
 
 <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Enciende</button>
 
@@ -78,6 +156,40 @@ function checkTime(i) {
 
 
 </script>
+
+
+<h1>Cambiar colores con valores RGB especificos</h1>
+
+<h2 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h2>
+<h2 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h2>
+<h2 style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h2>
+<h2 style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</h2>
+<h2 style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h2>
+<h2 style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h2>
+
+
+<br><br><br>
+
+<h2>Enlaces</h2>
+<a href="http://sie.cancun.tecnm.mx/cgi-bin/sie2.pl?Opc=PINDEXMENU&psie=intertec&dummy=0" target="_blank">Ingresa a tu SIE</a>
+
+
+<br><br><br>
+<ul class="sidenav">
+  <li><a class="active" href="#home">Inicio</a></li>
+  <li><a href="#news">Apartado</a></li>
+  <li><a href="#contact">Apartado2</a></li>
+  <li><a href="#about">Apartado3</a></li>
+</ul>
+
+<div class="content">
+  <h2>Barras de navegacion </h2>
+  
+  <h3>Podemos editar colores, tamaño y orientacion de las barras de navegacion</h3>
+</div>
+
+
+
 
 </body>
 </html>
