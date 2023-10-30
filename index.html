@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="startTime()" bgcolor="lightblue">
 
-<h2>Cosas que puedo realizar con JS</h2>
 
-<p id="demo">Dar una nueva vista</p>
+<h2>Cosas que puedo hacer con JavaScript</h2>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hola JavaScript!"'>Pucha el boton :3</button>
+<p id="demo">Cambiar el Texto que se muestra</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hola Mundo!"'>Puchalo!</button>
+<br><br><br>
+
+<p>Encender o apagar la luz</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Enciende</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Apaga</button>
+<br><br><br>
+
+<p id="demo2">Cambiar el tamaño del texto.</p>
+
+<button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">GOOO!</button>
+<br><br><br>
+
+<p id="demo3">Ahora lo ves</p>
+
+<button type="button" onclick="document.getElementById('demo3').style.display='none'">Ahora no :3</button>
+<br><br><br>
+
+
+<p>Nada por aqui.</p>
+
+<p id="demo4" style="display:none">Booo!</p>
+
+<button type="button" onclick="document.getElementById('demo4').style.display='block'">Magia!</button>
+
+<br><br><br>
+  <button onclick="document.getElementById('demo5').innerHTML=Date()">Que fecha es Hoy?</button>
+
+<p id="demo5"></p>
+
+
+<br><br><br>
+
+Año actual
+
+<p id="demo6"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo6").innerHTML = d.getFullYear();
+</script>
+<br><br><br>
+
+
+<h2>Relojito en JS</h2>
+
+<div id="txt"></div>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+</script>
 
 </body>
 </html>
+
